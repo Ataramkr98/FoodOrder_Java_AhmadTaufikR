@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 antialiased font-sans;
+    font-family: 'Google Sans', 'Google Sans Text', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  h1 {
+    @apply text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900;
+  }
+  h2 {
+    @apply text-lg font-bold text-slate-900;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Google Sans', 'Google Sans Text', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+  }
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-5 py-2.5 rounded-xl bg-brand-500 text-white text-sm font-bold hover:bg-brand-600 active:scale-[0.98] transition inline-flex items-center justify-center gap-2;
+  }
+  .btn-secondary {
+    @apply px-5 py-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 text-sm font-bold hover:bg-slate-50 active:scale-[0.98] transition inline-flex items-center justify-center gap-2;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-card border border-slate-100;
+  }
+  .input {
+    @apply w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm bg-white text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500;
+  }
+  .badge {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-bold;
+  }
+  .container-x {
+    @apply max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
